@@ -147,9 +147,9 @@ namespace election_chart
             // 
             // buttonEnterVote
             // 
-            this.buttonEnterVote.Location = new System.Drawing.Point(159, 325);
+            this.buttonEnterVote.Location = new System.Drawing.Point(159, 326);
             this.buttonEnterVote.Name = "buttonEnterVote";
-            this.buttonEnterVote.Size = new System.Drawing.Size(200, 46);
+            this.buttonEnterVote.Size = new System.Drawing.Size(200, 45);
             this.buttonEnterVote.TabIndex = 2;
             this.buttonEnterVote.Text = "ENTER VOTE DATA";
             this.buttonEnterVote.UseVisualStyleBackColor = true;
@@ -157,9 +157,9 @@ namespace election_chart
             // 
             // buttonCharts
             // 
-            this.buttonCharts.Location = new System.Drawing.Point(159, 387);
+            this.buttonCharts.Location = new System.Drawing.Point(159, 428);
             this.buttonCharts.Name = "buttonCharts";
-            this.buttonCharts.Size = new System.Drawing.Size(88, 46);
+            this.buttonCharts.Size = new System.Drawing.Size(91, 46);
             this.buttonCharts.TabIndex = 2;
             this.buttonCharts.Text = "CHARTS";
             this.buttonCharts.UseVisualStyleBackColor = true;
@@ -167,9 +167,9 @@ namespace election_chart
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(268, 387);
+            this.buttonExit.Location = new System.Drawing.Point(256, 428);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(91, 46);
+            this.buttonExit.Size = new System.Drawing.Size(103, 46);
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -193,11 +193,11 @@ namespace election_chart
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(439, 388);
+            this.buttonClear.Location = new System.Drawing.Point(159, 377);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.Size = new System.Drawing.Size(200, 45);
             this.buttonClear.TabIndex = 3;
-            this.buttonClear.Text = "Clear";
+            this.buttonClear.Text = "CLEAR";
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
@@ -206,7 +206,7 @@ namespace election_chart
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(544, 479);
+            this.ClientSize = new System.Drawing.Size(544, 529);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonCharts);
