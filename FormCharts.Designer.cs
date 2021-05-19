@@ -29,9 +29,9 @@ namespace election_chart
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chartVote = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -68,7 +68,7 @@ namespace election_chart
             this.groupBox1.Size = new System.Drawing.Size(700, 283);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Charts";
+            this.groupBox1.Text = "Sum Vote Chart";
             // 
             // groupBox2
             // 
@@ -97,21 +97,21 @@ namespace election_chart
             this.groupBox2.Size = new System.Drawing.Size(700, 313);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Local Statistic";
             // 
             // chartVote
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartVote.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.chartVote.ChartAreas.Add(chartArea3);
             this.chartVote.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartVote.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            this.chartVote.Legends.Add(legend3);
             this.chartVote.Location = new System.Drawing.Point(3, 18);
             this.chartVote.Name = "chartVote";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartVote.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Partys";
+            this.chartVote.Series.Add(series3);
             this.chartVote.Size = new System.Drawing.Size(694, 262);
             this.chartVote.TabIndex = 0;
             this.chartVote.Text = "chart1";
@@ -121,9 +121,9 @@ namespace election_chart
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(79, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 17);
+            this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SELECT STATE";
+            this.label1.Text = "SELECT STATE:";
             // 
             // comboBoxSelectState
             // 
@@ -132,6 +132,7 @@ namespace election_chart
             this.comboBoxSelectState.Name = "comboBoxSelectState";
             this.comboBoxSelectState.Size = new System.Drawing.Size(260, 24);
             this.comboBoxSelectState.TabIndex = 1;
+            this.comboBoxSelectState.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelectState_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -145,6 +146,7 @@ namespace election_chart
             // progressBarXP
             // 
             this.progressBarXP.Location = new System.Drawing.Point(214, 80);
+            this.progressBarXP.Maximum = 300;
             this.progressBarXP.Name = "progressBarXP";
             this.progressBarXP.Size = new System.Drawing.Size(260, 23);
             this.progressBarXP.TabIndex = 2;
@@ -161,6 +163,7 @@ namespace election_chart
             // progressBarYP
             // 
             this.progressBarYP.Location = new System.Drawing.Point(214, 118);
+            this.progressBarYP.Maximum = 300;
             this.progressBarYP.Name = "progressBarYP";
             this.progressBarYP.Size = new System.Drawing.Size(260, 23);
             this.progressBarYP.TabIndex = 2;
@@ -177,6 +180,7 @@ namespace election_chart
             // progressBarAP
             // 
             this.progressBarAP.Location = new System.Drawing.Point(214, 156);
+            this.progressBarAP.Maximum = 300;
             this.progressBarAP.Name = "progressBarAP";
             this.progressBarAP.Size = new System.Drawing.Size(260, 23);
             this.progressBarAP.TabIndex = 2;
@@ -193,6 +197,7 @@ namespace election_chart
             // progressBarTP
             // 
             this.progressBarTP.Location = new System.Drawing.Point(214, 195);
+            this.progressBarTP.Maximum = 300;
             this.progressBarTP.Name = "progressBarTP";
             this.progressBarTP.Size = new System.Drawing.Size(260, 23);
             this.progressBarTP.TabIndex = 2;
@@ -209,6 +214,7 @@ namespace election_chart
             // progressBarCP
             // 
             this.progressBarCP.Location = new System.Drawing.Point(214, 232);
+            this.progressBarCP.Maximum = 300;
             this.progressBarCP.Name = "progressBarCP";
             this.progressBarCP.Size = new System.Drawing.Size(260, 23);
             this.progressBarCP.TabIndex = 2;
@@ -261,15 +267,16 @@ namespace election_chart
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(118, 276);
+            this.label7.Location = new System.Drawing.Point(79, 276);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 17);
+            this.label7.Size = new System.Drawing.Size(115, 17);
             this.label7.TabIndex = 0;
-            this.label7.Text = "C PARTY:";
+            this.label7.Text = "INVALID VOTES:";
             // 
             // progressBarInvalid
             // 
             this.progressBarInvalid.Location = new System.Drawing.Point(214, 270);
+            this.progressBarInvalid.Maximum = 300;
             this.progressBarInvalid.Name = "progressBarInvalid";
             this.progressBarInvalid.Size = new System.Drawing.Size(260, 23);
             this.progressBarInvalid.TabIndex = 2;
@@ -292,7 +299,9 @@ namespace election_chart
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCharts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Election Chart";
+            this.Load += new System.EventHandler(this.FormCharts_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

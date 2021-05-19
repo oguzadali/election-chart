@@ -46,6 +46,7 @@ namespace election_chart
             this.buttonExit = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxInvalidVote = new System.Windows.Forms.TextBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -162,6 +163,7 @@ namespace election_chart
             this.buttonCharts.TabIndex = 2;
             this.buttonCharts.Text = "CHARTS";
             this.buttonCharts.UseVisualStyleBackColor = true;
+            this.buttonCharts.Click += new System.EventHandler(this.buttonCharts_Click);
             // 
             // buttonExit
             // 
@@ -171,6 +173,7 @@ namespace election_chart
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // label7
             // 
@@ -188,12 +191,23 @@ namespace election_chart
             this.textBoxInvalidVote.Size = new System.Drawing.Size(200, 22);
             this.textBoxInvalidVote.TabIndex = 1;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(439, 388);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 3;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(544, 479);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonCharts);
             this.Controls.Add(this.buttonEnterVote);
@@ -212,6 +226,7 @@ namespace election_chart
             this.Controls.Add(this.textBoxState);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Election Application";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,6 +252,7 @@ namespace election_chart
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxInvalidVote;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 
