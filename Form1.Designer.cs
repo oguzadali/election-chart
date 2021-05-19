@@ -44,6 +44,8 @@ namespace election_chart
             this.buttonEnterVote = new System.Windows.Forms.Button();
             this.buttonCharts = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxInvalidVote = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -144,16 +146,17 @@ namespace election_chart
             // 
             // buttonEnterVote
             // 
-            this.buttonEnterVote.Location = new System.Drawing.Point(159, 292);
+            this.buttonEnterVote.Location = new System.Drawing.Point(159, 325);
             this.buttonEnterVote.Name = "buttonEnterVote";
             this.buttonEnterVote.Size = new System.Drawing.Size(200, 46);
             this.buttonEnterVote.TabIndex = 2;
             this.buttonEnterVote.Text = "ENTER VOTE DATA";
             this.buttonEnterVote.UseVisualStyleBackColor = true;
+            this.buttonEnterVote.Click += new System.EventHandler(this.buttonEnterVote_Click);
             // 
             // buttonCharts
             // 
-            this.buttonCharts.Location = new System.Drawing.Point(159, 354);
+            this.buttonCharts.Location = new System.Drawing.Point(159, 387);
             this.buttonCharts.Name = "buttonCharts";
             this.buttonCharts.Size = new System.Drawing.Size(88, 46);
             this.buttonCharts.TabIndex = 2;
@@ -162,12 +165,28 @@ namespace election_chart
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(268, 354);
+            this.buttonExit.Location = new System.Drawing.Point(268, 387);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(91, 46);
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(83, 291);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "INVALID:";
+            // 
+            // textBoxInvalidVote
+            // 
+            this.textBoxInvalidVote.Location = new System.Drawing.Point(159, 288);
+            this.textBoxInvalidVote.Name = "textBoxInvalidVote";
+            this.textBoxInvalidVote.Size = new System.Drawing.Size(200, 22);
+            this.textBoxInvalidVote.TabIndex = 1;
             // 
             // Form1
             // 
@@ -178,6 +197,8 @@ namespace election_chart
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonCharts);
             this.Controls.Add(this.buttonEnterVote);
+            this.Controls.Add(this.textBoxInvalidVote);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxCP);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxTP);
@@ -214,6 +235,8 @@ namespace election_chart
         private System.Windows.Forms.Button buttonEnterVote;
         private System.Windows.Forms.Button buttonCharts;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxInvalidVote;
     }
 }
 
